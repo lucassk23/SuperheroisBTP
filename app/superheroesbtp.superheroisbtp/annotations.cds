@@ -23,6 +23,11 @@ annotate service.SuperHeroes with @(
             },
             {
                 $Type : 'UI.DataField',
+                Value : description,
+                @UI.Hidden,
+            },
+             {
+                $Type : 'UI.DataField',
                 Value : descriptionDynamic,
             },
             {
@@ -33,6 +38,7 @@ annotate service.SuperHeroes with @(
             {
                 $Type : 'UI.DataField',
                 Value : secretIdentity_ID,
+                @UI.Hidden,
             },
             {
                 $Type : 'UI.DataField',

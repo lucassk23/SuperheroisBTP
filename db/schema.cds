@@ -7,10 +7,10 @@ entity SuperHeroes : cuid, managed {
   alias: String(100);
   age: Integer;
   gender: String(10);
-  description: String(500) @UI.Hidden;
+  description: String(500);
   descriptionDynamic: String(500);
   superpowers: Association to many Superpowers on superpowers.superHeroes = $self;
-  secretIdentity: Association to SecretIdentities @UI.Hidden;
+  secretIdentity: Association to SecretIdentities;
   superpowers1: Association to Superpowers;
 }
 
