@@ -59,5 +59,48 @@ annotate service.SuperHeroes with @(
     UI.SelectionFields : [
         
     ],
+    UI.LineItem : [
+        {
+            $Type : 'UI.DataField',
+            Value : name,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : alias,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : age,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : gender,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : descriptionDynamic,
+            Label : 'description',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : description,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : secretIdentity_ID,
+        },
+    ],
 );
+
+annotate service.SuperHeroes with {
+    secretIdentity @(
+        Common.Text : secretIdentity.name,
+        Common.Text.@UI.TextArrangement : null,
+)};
+
+annotate service.SuperHeroes with {
+    descriptionDynamic @(
+        UI.MultiLineText : true,
+    )
+};
 

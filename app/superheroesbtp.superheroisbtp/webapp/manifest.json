@@ -139,6 +139,17 @@
                 "@com.sap.vocabularies.UI.v1.LineItem": {
                   "tableSettings": {
                     "type": "ResponsiveTable"
+                  },
+                  "columns": {
+                    "DataField::description": {
+                      "availability": "Default"
+                    },
+                    "DataField::secretIdentity_ID": {
+                      "availability": "Default"
+                    },
+                    "DataField::descriptionDynamic": {
+                      "availability": "Default"
+                    }
                   }
                 }
               }
