@@ -23,7 +23,7 @@ annotate service.SuperHeroes with @(
             },
             {
                 $Type : 'UI.DataField',
-                Value : description,
+                Value : descriptionDynamic,
             },
             {
                 $Type : 'UI.DataField',
@@ -97,10 +97,4 @@ annotate service.SuperHeroes with {
         Common.Text : secretIdentity.name,
         Common.Text.@UI.TextArrangement : null,
 )};
-
-annotate service.SuperHeroes with {
-    descriptionDynamic @(
-        UI.MultiLineText : true,
-    )
-};
 
