@@ -39,14 +39,14 @@
     "requires": {
       "[production]": {
         "db": "hana",
-        "auth": "xsuaa"
+        "auth": "none"
       },
       "auth": {
         "[development]": {
           "kind": "dummy"
         },
         "[production]": {
-          "kind": "xsuaa"
+          "kind": "none"
         }
       }
     }

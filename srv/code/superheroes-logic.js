@@ -45,8 +45,6 @@ module.exports = async function (results, req) {
 				result.descriptionDynamic = `${result.descriptionDynamic || ''} Secretly known as ${secretIdentity.name}.`.trim();
 			}
 		}
-
-		console.log("Descrição:", result.description);
 		// Logs para debugging (apague em produção)
 		console.log(`[Hero: ${result.name}] Final Description: ${result.descriptionDynamic}`);
 		console.log(Object.keys(result));

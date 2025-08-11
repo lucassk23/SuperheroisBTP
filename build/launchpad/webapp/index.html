@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title> Project Preview </title>
+    <title> Application Overview </title>
     <script src="https://ui5.sap.com/1.129.2/resources/sap-ui-core.js" 
             id="sap-ui-bootstrap"
             data-sap-ui-theme="sap_horizon"
@@ -27,7 +27,7 @@
                     return Controller.extend("PreviewController", {
                         onInit: function () {
 
-                            const data = {"Services":[{"ServiceName":"superheroesBTPSrv","DetailsURL":"./service/superheroesBTP/","Metadata":"./service/superheroesBTP/$metadata","Entities":[{"Name":"SuperHeroes","URL":"./service/superheroesBTP/SuperHeroes","FioriURL":"$fiori-preview/superheroesBTPSrv/SuperHeroes#preview-app"},{"Name":"Superpowers","URL":"./service/superheroesBTP/Superpowers","FioriURL":"$fiori-preview/superheroesBTPSrv/Superpowers#preview-app"},{"Name":"SecretIdentities","URL":"./service/superheroesBTP/SecretIdentities","FioriURL":"$fiori-preview/superheroesBTPSrv/SecretIdentities#preview-app"}],"EntitiesCount":3}]}
+                            const data = {"Services":[{"ServiceName":"superheroesBTPSrv","DetailsURL":"./service/superheroesBTP/","Metadata":"./service/superheroesBTP/$metadata","Entities":[{"Name":"SuperHeroes","URL":"./service/superheroesBTP/SuperHeroes","FioriURL":""},{"Name":"Superpowers","URL":"./service/superheroesBTP/Superpowers","FioriURL":""},{"Name":"SecretIdentities","URL":"./service/superheroesBTP/SecretIdentities","FioriURL":""}],"EntitiesCount":3}]}
                             this.getView().setModel(new JSONModel(data));
                         }
                     });

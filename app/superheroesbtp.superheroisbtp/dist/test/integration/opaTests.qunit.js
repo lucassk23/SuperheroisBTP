@@ -1,0 +1,2 @@
+sap.ui.require(["sap/fe/test/JourneyRunner","superheroesbtp/superheroisbtp/test/integration/FirstJourney","superheroesbtp/superheroisbtp/test/integration/pages/SuperHeroesList","superheroesbtp/superheroisbtp/test/integration/pages/SuperHeroesObjectPage"],function(e,r,s,t){"use strict";var e=new e({launchUrl:sap.ui.require.toUrl("superheroesbtp/superheroisbtp")+"/index.html"});e.run({pages:{onTheSuperHeroesList:s,onTheSuperHeroesObjectPage:t}},r.run)});
+//# sourceMappingURL=opaTests.qunit.js.map
