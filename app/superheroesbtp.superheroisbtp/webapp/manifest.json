@@ -141,11 +141,8 @@
                     "type": "ResponsiveTable"
                   },
                   "columns": {
-                    "DataField::description": {
-                      "availability": "Default"
-                    },
                     "DataField::secretIdentity_ID": {
-                      "availability": "Default"
+                      "availability": "Hidden"
                     },
                     "DataField::descriptionDynamic": {
                       "availability": "Default"

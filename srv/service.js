@@ -4,12 +4,17 @@
  */
 const LCAPApplicationService = require('@sap/low-code-event-handler');
 const superheroes_Logic = require('./code/superheroes-logic');
+const superheroes_Logic_Before = require('./code/superheroes-logic-before');
 
 class superheroesBTPSrv extends LCAPApplicationService {
     async init() {
 
         this.after('READ', 'SuperHeroes', async (results, request) => {
             await superheroes_Logic(results, request);
+        });
+
+        this.before('READ', 'SuperHeroes', async (request) => {
+            await superheroes_Logic_Before(request);
         });
 
         return super.init();

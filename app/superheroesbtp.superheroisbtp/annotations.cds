@@ -24,13 +24,8 @@ annotate service.SuperHeroes with @(
             {
                 $Type : 'UI.DataField',
                 Value : description,
-                @UI.Hidden,
             },
              {
-                $Type : 'UI.DataField',
-                Value : descriptionDynamic,
-            },
-            {
                 $Type : 'UI.DataField',
                 Label : 'Superpower',
                 Value : superpowers1_ID,
@@ -38,7 +33,6 @@ annotate service.SuperHeroes with @(
             {
                 $Type : 'UI.DataField',
                 Value : secretIdentity_ID,
-                @UI.Hidden,
             },
             {
                 $Type : 'UI.DataField',
@@ -72,6 +66,12 @@ annotate service.SuperHeroes with @(
         },
         {
             $Type : 'UI.DataField',
+            Value : descriptionDynamic,
+            Label : 'Descrição',
+
+        },
+        {
+            $Type : 'UI.DataField',
             Value : alias,
         },
         {
@@ -84,23 +84,15 @@ annotate service.SuperHeroes with @(
         },
         {
             $Type : 'UI.DataField',
-            Value : descriptionDynamic,
-            Label : 'description',
-        },
-        {
-            $Type : 'UI.DataField',
             Value : description,
+            @UI.Hidden,
+
         },
         {
             $Type : 'UI.DataField',
             Value : secretIdentity_ID,
+            @UI.Hidden,
         },
     ],
 );
-
-annotate service.SuperHeroes with {
-    secretIdentity @(
-        Common.Text : secretIdentity.name,
-        Common.Text.@UI.TextArrangement : null,
-)};
 

@@ -10,10 +10,12 @@ module.exports = async function (results, req) {
 	for (const result of results) {
 		if (!result) continue;
 
+
+
 		result.descriptionDynamic = result.description;
 		// Adiciona descrição para heróis imortais
 		if (result.age > 500) {
-			result.description = `An immortal ${result.descriptionDynamic|| 'being'}`;
+			result.descriptionDynamic = `An immortal ${result.descriptionDynamic || 'being'}`;
 		}
 
 		// Busca os superpoderes associados ao herói
@@ -23,7 +25,7 @@ module.exports = async function (results, req) {
 
 		if (powers?.length > 0) {
 			const powerNames = powers.map(p => p.name).join(", ");
-			result.descriptionDynamic = `${result.descriptionDynamic|| ''} Possesses powers: ${powerNames}.`.trim();
+			result.descriptionDynamic = `${result.descriptionDynamic || ''} Possesses powers: ${powerNames}.`.trim();
 
 			// Marca heróis com muitos poderes
 			if (powers.length >= 3) {
@@ -44,6 +46,7 @@ module.exports = async function (results, req) {
 			}
 		}
 
+		console.log("Descrição:", result.description);
 		// Logs para debugging (apague em produção)
 		console.log(`[Hero: ${result.name}] Final Description: ${result.descriptionDynamic}`);
 		console.log(Object.keys(result));
